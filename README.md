@@ -56,6 +56,15 @@ This configuration will generate a configuration file at `/etc/munin/plugin-conf
     env.regex bash
     env.name bash
 
+### Additional plugins
+
+additional plugins can be downloaded :
+munin_node_additional_plugins:
+  - name: "plugin name"
+    url: "url"
+
+and will be added in munin_plugin_src_path
+
 ## Dependencies
 
 None.

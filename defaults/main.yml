@@ -13,6 +13,11 @@ munin_node_allowed_ips:
 munin_plugin_src_path: /usr/share/munin/plugins/
 munin_plugin_dest_path: /etc/munin/plugins/
 
+# List of munin plugings to download
+munin_node_additional_plugins: []
+#  - name: mysql_
+#    url: https://github.com/munin-monitoring/munin/blob/devel/plugins/node.d/mysql_
+
 # List of munin plugins to enable.
 munin_node_plugins: []
   # - name: uptime

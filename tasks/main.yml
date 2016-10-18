@@ -19,6 +19,14 @@
     mode: 0644
   notify: restart munin-node
 
+- name: Download additional plugins
+  get_url:
+    url: "{{ item.url }}"
+    dest: "{{ munin_plugin_src_path }}/{{ item.name }}"
+    mode: "u=rwx,g=rx,o=rx"
+    force: yes
+  with_items: "{{ munin_node_additional_plugins }}"
+
 - name: Generate plugin configuration.
   template:
     src: plugin-conf.j2
