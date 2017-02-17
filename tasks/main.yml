@@ -10,6 +10,10 @@
   apt: name=munin-node state=installed
   when: ansible_os_family == 'Debian'
 
+- name: Ensure munin-node is installed (Debian).
+  apt: name=munin-plugins-extra state=installed
+  when: ansible_os_family == 'Debian'
+
 - name: Copy munin-node configuration.
   template:
     src: munin-node.conf.j2
